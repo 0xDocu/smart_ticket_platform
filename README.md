@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# Happy Ticket 🎟️  
+*A Web 2.5 NFT-ticketing MVP — built in 5 weeks for the Like Lion “Blockchain School 4th” Hackathon (2024.02.29)* :contentReference[oaicite:0]{index=0}
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Live Demo](https://happyticket.duckdns.org) | Bronze Prize 🥉 (Hackathon)
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## TL;DR
+Happy Ticket lets anyone buy, own and show digital tickets on **Ethereum Sepolia** without ever touching seeds or gas:  
+1. **Social-login → custodial wallet** auto-created from SNS ID  
+2. **Card / easy payment** buys a “voucher” (gas subsidised)  
+3. Voucher → **ERC-721 NFT ticket** you can keep forever  
+4. Artists/promoters get on-chain analytics & zero paper waste  
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Why Web 2.5?
+Traditional NFT ticketing promises anti-fraud & permanence, but Web 3.0 UX (wallets, swaps, gas) scares users.  
+Happy Ticket delivers *Web 2.0 familiarity* with *Web 3.0 ownership* — bridging the gap. :contentReference[oaicite:1]{index=1}
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Features
+| Category | Details |
+| --- | --- |
+| 🔑 **Friction-less Onboarding** | Google / Facebook / Apple login → deterministic EOA |
+| 💳 **One-click Purchase** | Voucher bought in fiat → backend mints ticket NFT |
+| ⛽ **Gasless UX** | Relayer pays gas from admin account |
+| 🖼️ **Forever Yours** | NFT is a tradable, verifiable proof of attendance |
+| 📊 **Promoter Dashboard** | Ticket Explorer shows real-time sales & holder stats |
+| 🌿 **Eco friendly** | No paper tickets, lower fees for fans & venues |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Architecture
+```text
+React (Vite)
+│
+│  REST / JWT
+▼
+Nginx ── Node.js API ── MariaDB
+│                       ▲
+│ mintTicket()          │
+▼                       │
+Ethereum Sepolia ◀──────┘  (Truffle + Solidity)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Live Demo (GIF)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="center">
+<img src="https://github.com/bstream0138/likelion_0x02_ticket/assets/95029317/c9401718-0026-405c-bd41-2b8599e1268c" width="240" height="628">
+</p>
