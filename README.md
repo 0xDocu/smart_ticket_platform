@@ -1,40 +1,25 @@
 # Happy Ticket 🎟️  
-*A Web 2.5 NFT-ticketing MVP — built in 5 weeks for the Like Lion “Blockchain School 4th” Hackathon (2024.02.29)* :contentReference[oaicite:0]{index=0}
+A Web 2.5 NFT-ticketing MVP
 
-[Live Demo](https://happyticket.duckdns.org) | Bronze Prize 🥉 (Hackathon)
+## Overview
+Happy Ticket is a digital ticketing platform that combines traditional web usability with blockchain ownership on Ethereum Sepolia. 
+Users can purchase and own digital tickets without managing crypto wallets or gas fees directly.
 
----
+## Core Functionality
+The platform operates through a three-step process:
+1. Social login automatically creates a custodial wallet from social media credentials
+2. Standard payment methods purchase vouchers with subsidized gas costs
+3. Vouchers convert to ERC-721 NFT tickets for permanent ownership
 
-## TL;DR
-Happy Ticket lets anyone buy, own and show digital tickets on **Ethereum Sepolia** without ever touching seeds or gas:  
-1. **Social-login → custodial wallet** auto-created from SNS ID  
-2. **Card / easy payment** buys a “voucher” (gas subsidised)  
-3. Voucher → **ERC-721 NFT ticket** you can keep forever  
-4. Artists/promoters get on-chain analytics & zero paper waste  
-
----
+This approach provides artists and promoters with on-chain analytics while eliminating paper waste.
 
 ## Why Web 2.5?
-Traditional NFT ticketing promises anti-fraud & permanence, but Web 3.0 UX (wallets, swaps, gas) scares users.  
-Happy Ticket delivers *Web 2.0 familiarity* with *Web 3.0 ownership* — bridging the gap. :contentReference[oaicite:1]{index=1}
-
----
-
-## Features
-| Category | Details |
-| --- | --- |
-| 🔑 **Friction-less Onboarding** | Google / Facebook / Apple login → deterministic EOA |
-| 💳 **One-click Purchase** | Voucher bought in fiat → backend mints ticket NFT |
-| ⛽ **Gasless UX** | Relayer pays gas from admin account |
-| 🖼️ **Forever Yours** | NFT is a tradable, verifiable proof of attendance |
-| 📊 **Promoter Dashboard** | Ticket Explorer shows real-time sales & holder stats |
-| 🌿 **Eco friendly** | No paper tickets, lower fees for fans & venues |
-
----
+Traditional NFT ticketing offers anti-fraud protection and permanent ownership records, but Web 3.0 user experience barriers like wallet management and gas fees create adoption challenges. 
+Happy Ticket addresses this by providing familiar Web 2.0 interfaces while maintaining Web 3.0 ownership benefits.
 
 ## Architecture
 ```text
-React (Vite)
+React
 │
 │  REST / JWT
 ▼
@@ -43,11 +28,11 @@ Nginx ── Node.js API ── MariaDB
 │ mintTicket()          │
 ▼                       │
 Ethereum Sepolia ◀──────┘  (Truffle + Solidity)
-
----
+```
 
 ## Live Demo (GIF)
 
 <p align="center">
 <img src="https://github.com/bstream0138/likelion_0x02_ticket/assets/95029317/c9401718-0026-405c-bd41-2b8599e1268c" width="240" height="628">
 </p>
+
